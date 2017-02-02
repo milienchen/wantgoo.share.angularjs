@@ -10,5 +10,9 @@
             self.fullName = function () {
                 return self.firstName + ", " + self.lastName;
             };
+
+            self.showFullName = function () {
+                alert(self.firstName + ", " + self.lastName);
+            };
         }
     ]);
