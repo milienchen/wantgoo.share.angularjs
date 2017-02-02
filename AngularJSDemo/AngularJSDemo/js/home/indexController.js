@@ -6,5 +6,9 @@
 
             self.firstName = "Johnny";
             self.lastName = "Chuang";
+
+            self.fullName = function () {
+                return self.firstName + ", " + self.lastName;
+            };
         }
     ]);

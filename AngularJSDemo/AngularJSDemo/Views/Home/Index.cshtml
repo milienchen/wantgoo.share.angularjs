@@ -14,6 +14,8 @@
 </head>
 <body ng-app="indexApp" ng-controller="indexController as indexCtrl">
 <span ng-bind="indexCtrl.firstName"></span>, <span ng-bind="indexCtrl.lastName"></span>
+<br/>
+<span ng-bind="indexCtrl.fullName()"></span>
 <div>
     <input type="text" ng-model="indexCtrl.firstName"/>
     <input type="text" ng-model="indexCtrl.lastName"/>
