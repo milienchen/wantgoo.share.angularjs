@@ -1,7 +1,8 @@
 ﻿angular.module("indexApp")
     .controller("indexController",
     [
-        function () {
+        "$http",
+        function ($http) {
             var self = this;
 
             self.firstName = "Johnny";
@@ -20,5 +21,15 @@
                 { firstName: "Kevin", lastName: "Chen", age: 8 },
                 { firstName: "Mary", lastName: "Chou", age: 9 }
             ];
+
+            self.getMoreUsers = function () {
+                $http.get("/user/list")
+                    .then(function success(response) {
+                            self.users.push.apply(self.users, response.data);
+                        },
+                        function error(exception) {
+                            console.error(exception);
+                        });
+            };
         }
     ]);
