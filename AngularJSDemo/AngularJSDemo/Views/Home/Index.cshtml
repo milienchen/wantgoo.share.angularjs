@@ -8,6 +8,11 @@
 <head>
     <meta name="viewport" content="width=device-width"/>
     <title>Index</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
     <script src="~/js/angular.min.js"></script>
     <script src="~/js/home/indexApp.js"></script>
     <script src="~/js/home/indexController.js"></script>
@@ -21,5 +26,21 @@
     <input type="text" ng-model="indexCtrl.lastName"/>
 </div>
 <input type="button" value="按下去" ng-click="indexCtrl.showFullName()"/>
+<table>
+    <thead>
+    <tr>
+        <th>姓</th>
+        <th>名</th>
+        <th>年齡</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr ng-repeat="user in indexCtrl.users">
+        <td ng-bind="user.lastName"></td>
+        <td ng-bind="user.firstName"></td>
+        <td ng-bind="user.age"></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
