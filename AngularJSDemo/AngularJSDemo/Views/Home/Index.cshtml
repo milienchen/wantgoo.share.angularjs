@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width"/>
+    <title>Index</title>
+    <script src="~/js/angular.min.js"></script>
+    <script src="~/js/home/indexApp.js"></script>
+    <script src="~/js/home/indexController.js"></script>
+</head>
+<body ng-app="indexApp" ng-controller="indexController as indexCtrl">
+<span ng-bind="indexCtrl.firstName"></span>, <span ng-bind="indexCtrl.lastName"></span>
+<div>
+    <input type="text" ng-model="indexCtrl.firstName"/>
+    <input type="text" ng-model="indexCtrl.lastName"/>
+</div>
+</body>
+</html>
