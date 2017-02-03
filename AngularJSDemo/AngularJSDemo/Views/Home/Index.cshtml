@@ -9,9 +9,7 @@
     <meta name="viewport" content="width=device-width"/>
     <title>Index</title>
     <style>
-        table, th, td {
-            border: 1px solid black;
-        }
+        table, th, td { border: 1px solid black; }
     </style>
     <script src="~/js/angular.min.js"></script>
     <script src="~/js/home/indexApp.js"></script>
@@ -38,10 +36,10 @@
     <tr ng-repeat="user in indexCtrl.users">
         <td ng-bind="user.lastName"></td>
         <td ng-bind="user.firstName"></td>
-        <td ng-bind="user.age"></td>
+        <td ng-bind="user.age | number:2"></td>
     </tr>
     </tbody>
 </table>
-<input type="button" value="加一點人" ng-click="indexCtrl.getMoreUsers()" />
+<input type="button" value="加一點人" ng-click="indexCtrl.getMoreUsers()"/>
 </body>
 </html>
