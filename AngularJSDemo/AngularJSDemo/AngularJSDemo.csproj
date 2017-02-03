@@ -92,7 +92,6 @@
     <Content Include="Global.asax" />
     <Content Include="js\angular.js" />
     <Content Include="js\angular.min.js" />
-    <Content Include="js\escapeFilter.js" />
     <Content Include="js\home\indexApp.js" />
     <Content Include="js\home\indexController.js" />
     <Content Include="js\htmlFilters.js" />

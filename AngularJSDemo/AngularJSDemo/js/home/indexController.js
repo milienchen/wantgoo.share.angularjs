@@ -32,6 +32,12 @@
                         });
             };
 
+            self.now = new Date();
+
+            self.updateNow = function () {
+                self.now = new Date();
+            };
+
             self.unsafeString = "&<>";
         }
     ]);

@@ -15,7 +15,6 @@
     <script src="~/js/home/indexApp.js"></script>
     <script src="~/js/home/indexController.js"></script>
     <script src="~/js/htmlFilters.js"></script>
-    <script src="~/js/escapeFilter.js"></script>
 </head>
 <body ng-app="indexApp" ng-controller="indexController as indexCtrl">
 <span ng-bind="indexCtrl.firstName"></span>, <span ng-bind="indexCtrl.lastName"></span>
@@ -44,7 +43,7 @@
 </table>
 <input type="button" value="加一點人" ng-click="indexCtrl.getMoreUsers()"/>
 <br/>
-<input type="date" ng-model="indexCtrl.birthday"/><span ng-bind="indexCtrl.birthday | date:'yyyy-MM/dd'"></span>
+現在時間 <span ng-bind="indexCtrl.now | date:'yyyy-MM/dd HH_mm:ss.sss'"></span><input type="button" value="更新" ng-click="indexCtrl.updateNow()"/>
 <br/>
 <span ng-bind="indexCtrl.unsafeString | escape"></span>
 </body>
