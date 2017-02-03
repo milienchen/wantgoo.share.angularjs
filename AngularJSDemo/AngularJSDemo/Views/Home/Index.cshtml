@@ -14,6 +14,8 @@
     <script src="~/js/angular.min.js"></script>
     <script src="~/js/home/indexApp.js"></script>
     <script src="~/js/home/indexController.js"></script>
+    <script src="~/js/htmlFilters.js"></script>
+    <script src="~/js/escapeFilter.js"></script>
 </head>
 <body ng-app="indexApp" ng-controller="indexController as indexCtrl">
 <span ng-bind="indexCtrl.firstName"></span>, <span ng-bind="indexCtrl.lastName"></span>
@@ -43,5 +45,7 @@
 <input type="button" value="加一點人" ng-click="indexCtrl.getMoreUsers()"/>
 <br/>
 <input type="date" ng-model="indexCtrl.birthday"/><span ng-bind="indexCtrl.birthday | date:'yyyy-MM/dd'"></span>
+<br/>
+<span ng-bind="indexCtrl.unsafeString | escape"></span>
 </body>
 </html>

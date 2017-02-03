@@ -31,5 +31,7 @@
                             console.error(exception);
                         });
             };
+
+            self.unsafeString = "&<>";
         }
     ]);

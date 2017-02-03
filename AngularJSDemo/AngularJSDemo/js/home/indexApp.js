@@ -1,1 +1,1 @@
-﻿angular.module("indexApp", []);
+﻿angular.module("indexApp", ["htmlFilters"]);
