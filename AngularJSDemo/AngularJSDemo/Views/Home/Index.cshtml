@@ -30,11 +30,11 @@
     <tr>
         <th>姓</th>
         <th>名</th>
-        <th>年齡</th>
+        <th style="cursor: pointer;" ng-click="indexCtrl.reverse = !indexCtrl.reverse">年齡</th>
     </tr>
     </thead>
     <tbody>
-    <tr ng-repeat="user in indexCtrl.users">
+    <tr ng-repeat="user in indexCtrl.users | orderBy:'age':indexCtrl.reverse">
         <td ng-bind="user.lastName"></td>
         <td ng-bind="user.firstName"></td>
         <td ng-bind="user.age | number:2"></td>

@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System;
+using System.Web.Mvc;
 
 namespace AngularJSDemo.Controllers
 {
@@ -7,12 +8,14 @@ namespace AngularJSDemo.Controllers
         // GET: User
         public ActionResult List()
         {
+            var random = new Random(Guid.NewGuid().GetHashCode());
+
             return
                 this.Json(
                     new[]
                         {
-                            new { firstName = "Amy", lastName = "Kuo", age = 19 },
-                            new { firstName = "Mark", lastName = "Chang", age = 28 }
+                            new { firstName = "Amy", lastName = "Kuo", age = random.Next(120) },
+                            new { firstName = "Mark", lastName = "Chang", age = random.Next(120) }
                         },
                     JsonRequestBehavior.AllowGet);
         }
