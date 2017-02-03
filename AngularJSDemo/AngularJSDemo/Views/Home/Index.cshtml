@@ -41,5 +41,7 @@
     </tbody>
 </table>
 <input type="button" value="加一點人" ng-click="indexCtrl.getMoreUsers()"/>
+<br/>
+<input type="date" ng-model="indexCtrl.birthday"/><span ng-bind="indexCtrl.birthday | date:'yyyy-MM/dd'"></span>
 </body>
 </html>
